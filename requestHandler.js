@@ -4,8 +4,8 @@ function start(response,postData){
     console.log("This is start.");
     var body='<html>'+
                 '<head>'+
-                    '<meta http-equiv="Content-Type" content="text/html"; '+
-                    'charset=UTF-8" />'+
+                '<meta http-equiv="Content-Type" content="text/html; '+
+                'charset=UTF-8" />'+
                 '</head>'+
                 '<body>'+
                     '<p>哈哈哈哈</p>'+
@@ -24,7 +24,7 @@ function start(response,postData){
 };
 function upload(response,postData){
     console.log("This is upload.");
-    response.writeHead(200,{"Content-type":"text/plain"});
+    response.writeHead(200,{"Content-type":"text/plain;charset=UTF-8"});
     response.write("You sent "+querystring.parse(postData).text+'.');//使用querystring取得text的部分
     response.end();
 };
