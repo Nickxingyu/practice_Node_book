@@ -1,12 +1,11 @@
-function route(pathname,handle){
+function route(pathname,handle,response,postData){
     //console.log("About route to a request for "+pathname);
     if(typeof(handle[pathname])==='function'){
         console.log(typeof(handle[pathname]));
-        handle[pathname]();
+        handle[pathname](response,postData);
     }
     else{
-        console.log(typeof(handle[pathname]));
-        console.log("404 ERROR . I don't know this url.");
+
     }
 }
 exports.route=route;
