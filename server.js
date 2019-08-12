@@ -15,6 +15,7 @@ function start(route,handle){
         request.addListener('end',function(){//監聽使用者發出的請求
             route(pathname,handle,response,postData)
         });
+        
     };
     http.createServer(onRequest).listen(8888);
 };
